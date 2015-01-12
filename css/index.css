@@ -1,0 +1,38 @@
+#root-container {
+    padding: 50px;
+}
+
+#control-contrainer {
+    margin-bottom: 20px;
+}
+
+.file-input {
+    padding: 3px 0;
+}
+
+.file-div {
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+
+#chartdiv {
+    height: 800px;
+}
+
+#dir-btn-container {
+    margin-top: 10px;
+}
+
+input.sys-val {
+    width: 40px;
+}
+
+span.candle-detail-label {
+    width: 60px;
+    float: left;
+}
+
+/* #back-button { */
+/*     display: inline-block; */
+/*     margin-right: 50px; */
+/* } */

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <html xmlns="http://www.w3.org/1999/xhtml" -->
+<!--       xmlns:svg="http://www.w3.org/2000/svg" -->
+<!--       xmlns:vml="urn:schemas-microsoft-com:vml"> -->
+<html>
+  <head>
+    <script type="text/javascript" src="javascript/sprintf.js"></script>
+    <script type="text/javascript" src="javascript/jsgl.js"></script>
+    <script type="text/javascript" src="javascript/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="javascript/drawing.js"></script>
+    <script type="text/javascript" src="javascript/candle.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div id="root-container" class="container-fluid">
+      <div class="row" id="control-contrainer">
+        <div class="col-lg-3 file-div">
+          <label>Candle File</label>
+          <input id="candle-file" type="file" class="file-input" />
+          <span class="candle-detail-label">return:</span><span id="day-return"></span>
+        </div>
+        <div class="col-lg-3">
+          <div>
+            <input id="cur-candle-span" value="0" class="sys-val" /> / <span id="total-candle-span">0</span>
+            &nbsp; &nbsp; &nbsp;
+            <input id="cur-trade-span" value="0" class="sys-val" /> / <span id="total-trade-span">0</span>
+          </div>
+          <div id="dir-btn-container">
+            <button class="btn" id="fast-back-button">
+              <span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span>
+            </button>
+            <button class="btn" id="back-button">
+              <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+            </button>
+            <button class="btn" id="forward-button">
+              <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+            </button>
+            <button class="btn" id="fast-forward-button">
+              <span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3 file-div">
+          <div class="row">
+            <div class="col-sm-6"><span class="candle-detail-label">Open:</span><span id="candle-open"></span></div>
+            <div class="col-sm-6"><span class="candle-detail-label">Close:</span><span id="candle-close"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6"><span class="candle-detail-label">High:</span><span id="candle-high"></span></div>
+            <div class="col-sm-6"><span class="candle-detail-label">Low:</span><span id="candle-low"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10">
+              <span class="candle-detail-label">Volume:</span>
+              <span id="candle-volume"></span>
+              <span id="candle-time"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="chartdiv" class="col-lg-12">
+          <div style="padding: 100px;">"Yeah, Mr. White! Yeah, science!"</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
