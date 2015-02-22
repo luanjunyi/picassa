@@ -3,6 +3,7 @@ var REALIZED_TRADE_OPEN_COLOR = '#87CEFF';
 var REALIZED_TRADE_CLOSE_COLOR = '#63B8FF';
 var UNREALIZED_TRADE_OPEN_COLOR = '#cdcdcd';
 var HORIZONTAL_LINE_NUM = 5;
+var TRADE_LEFT_WINDOW = 50;
 
 var g_candles = [];
 var g_trades = [];
@@ -64,7 +65,7 @@ $(function() {
         return;
       }
 
-      var idx = g_trade_loc[g_cur_trade_index];
+      var idx = Math.max(0, g_trade_loc[g_cur_trade_index] - TRADE_LEFT_WINDOW);
       if (g_candle_begin_index < idx) {
         g_candle_begin_index = idx;
         $("#cur-candle-span").val(g_candle_begin_index);
@@ -77,7 +78,7 @@ $(function() {
         return;
       }
       g_cur_trade_index += 1;
-      g_candle_begin_index = g_trade_loc[g_cur_trade_index];
+      g_candle_begin_index = Math.max(0, g_trade_loc[g_cur_trade_index] - TRADE_LEFT_WINDOW);
       $("#cur-candle-span").val(g_candle_begin_index);
       $("#cur-trade-span").val(g_cur_trade_index);
       draw_candles();
@@ -91,7 +92,7 @@ $(function() {
         return;
       }
       g_cur_trade_index -= 1;
-      g_candle_begin_index = g_trade_loc[g_cur_trade_index];
+      g_candle_begin_index = Math.max(0, g_trade_loc[g_cur_trade_index] - TRADE_LEFT_WINDOW);
       $("#cur-candle-span").val(g_candle_begin_index);
       $("#cur-trade-span").val(g_cur_trade_index);
       draw_candles();
